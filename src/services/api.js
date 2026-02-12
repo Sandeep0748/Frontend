@@ -4,6 +4,7 @@ const API_URL = 'https://skill-exchange-server-u91b.vercel.app/api';
 
 const apiClient = axios.create({
   baseURL: API_URL,
+  withCredentials: true,
   headers: {
     'Content-Type': 'application/json',
   },
