@@ -1,6 +1,9 @@
 import axios from 'axios';
 
-const API_URL = 'https://skill-exchange-server-u91b.vercel.app/api';
+// Determine API URL based on environment
+const API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+  ? 'http://localhost:5000/api'
+  : 'https://skill-exchange-server-u91b.vercel.app/api';
 
 const apiClient = axios.create({
   baseURL: API_URL,
